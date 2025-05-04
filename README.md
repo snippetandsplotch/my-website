@@ -21,7 +21,7 @@ If any artwork speaks to you and you'd like to purchase a piece, please don’t 
 
 📩 **Contact:**  
 **Email:** snippetandsploch@gmail.com  
-**Instagram:** [@SnippetAndSploch](https://instagram.com/SnippetAndSploch)
+**Instagram:** [@SnippetAndSploch](https://instagram.com/snippetandsplotch)
 
 Your support means the world and helps keep the creativity flowing.
 
