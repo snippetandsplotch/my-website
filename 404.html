@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Snippet and Splotch</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#EBE3D5',      // Refined: warmer, more neutral cream
+                            tan: '#C9B8A3',        // Refined: slightly warmer tan
+                            gray: '#8A8279',       // Refined: warmer gray with brown undertone
+                            olive: '#5F5548',      // Refined: richer olive-brown
+                            charcoal: '#2B2826',   // Refined: deeper charcoal
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/avenir');
+
+        body {
+            font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            letter-spacing: 0.05em;
+        }
+        .subheading-font {
+            font-family: 'Avenir', -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="text-center">
+            <h1 class="text-9xl font-bold text-brand-olive heading-font">404</h1>
+            <p class="text-4xl font-semibold text-brand-charcoal mt-4 heading-font">Oops! Page Not Found</p>
+            <p class="text-lg text-brand-gray mt-4 max-w-md mx-auto subheading-font">
+                The page you're looking for seems to have wandered off like a brushstroke on canvas.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-olive hover:bg-brand-charcoal transition-colors subheading-font">
+                    Back to Gallery
+                </a>
+                <a href="/#shop" class="inline-flex items-center justify-center px-6 py-3 border border-brand-olive text-base font-medium rounded-md text-brand-olive bg-white hover:bg-brand-cream transition-colors subheading-font">
+                    Browse Shop
+                </a>
+            </div>
+            <div class="mt-12">
+                <svg class="mx-auto h-48 w-48 text-brand-tan opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
