@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test - Snippet and Splotch</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .test-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .test-item { border: 1px solid #ccc; padding: 10px; }
+        .test-item img { width: 100%; height: 200px; object-fit: cover; }
+        .status { padding: 5px; margin-top: 5px; font-size: 12px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    <p>Testing images from problematic collections:</p>
+
+    <h2>Paintings & Watercolors</h2>
+    <div class="test-grid">
+        <div class="test-item">
+            <img src="instagram-art/art-13.jpg" alt="Art 13"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-13.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-23.jpg" alt="Art 23"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-23.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-32.jpg" alt="Art 32"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-32.jpg</p>
+        </div>
+    </div>
+
+    <h2>Colored Pencil Works</h2>
+    <div class="test-grid">
+        <div class="test-item">
+            <img src="instagram-art/art-20.jpg" alt="Art 20"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-20.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-37.jpg" alt="Art 37"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-37.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-49.jpg" alt="Art 49"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-49.jpg</p>
+        </div>
+    </div>
+
+    <h2>Marker & Illustrations</h2>
+    <div class="test-grid">
+        <div class="test-item">
+            <img src="instagram-art/art-22.jpg" alt="Art 22"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-22.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-26.jpg" alt="Art 26"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-26.jpg</p>
+        </div>
+        <div class="test-item">
+            <img src="instagram-art/art-75.jpg" alt="Art 75"
+                 onload="this.nextElementSibling.className='status success'; this.nextElementSibling.textContent='✓ Loaded'"
+                 onerror="this.nextElementSibling.className='status error'; this.nextElementSibling.textContent='✗ Failed to load'">
+            <div class="status">Loading...</div>
+            <p>art-75.jpg</p>
+        </div>
+    </div>
+
+    <br>
+    <p><a href="index.html">← Back to Home</a></p>
+</body>
+</html>
