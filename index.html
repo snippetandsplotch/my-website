@@ -22,10 +22,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            cream: '#F3F0E5',      // Pavsarts cream background
-                            tan: '#D4C4B0',
-                            coral: '#E14749',      // Pavsarts coral accent
-                            charcoal: '#2B2826',
+                            cream: '#F3F0E5',        // Light cream background
+                            tan: '#D4C4B0',          // Tan borders/accents
+                            gray: '#8A8279',         // Secondary text
+                            olive: '#5F5548',        // Dark accents
+                            charcoal: '#2B2826',     // Primary text
+                            teal: '#2A7C7C',         // Main accent
+                            // Darker tones for depth
+                            'deep-olive': '#4A433A', // Button hover, footer
+                            'rich-charcoal': '#1A1816', // Deep shadows
+                            'dark-brown': '#3D3633', // Alternative dark bg
                         }
                     }
                 }
@@ -39,6 +45,9 @@
 
     <!-- GLightbox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <!-- Watermark Protection -->
+    <link rel="stylesheet" href="watermark-overlay.css">
 
     <style>
         body {
@@ -71,7 +80,7 @@
         }
 
         .product-card:hover {
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(26, 24, 22, 0.15);
         }
 
         .product-card:hover .product-image {
@@ -186,7 +195,7 @@
 
         /* Focus Styles for Accessibility */
         a:focus, button:focus, input:focus, textarea:focus, select:focus {
-            outline: 2px solid #E14749;
+            outline: 2px solid #2A7C7C;
             outline-offset: 2px;
         }
 
@@ -274,7 +283,7 @@
 
         .hover-lift:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(26, 24, 22, 0.2);
         }
 
         /* Button Ripple Effect */
@@ -441,7 +450,7 @@
 <body class="bg-brand-cream text-brand-charcoal">
 
     <!-- Skip to Content (Accessibility) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-coral focus:text-white focus:rounded">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-teal focus:text-white focus:rounded">
         Skip to main content
     </a>
 
@@ -456,16 +465,16 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex gap-8" aria-label="Main navigation">
-                    <a href="collections/index.html" class="text-sm hover:text-brand-coral transition-colors focus:outline-none focus:text-brand-coral">COLLECTIONS</a>
-                    <a href="#about" class="text-sm hover:text-brand-coral transition-colors smooth-scroll focus:outline-none focus:text-brand-coral">ABOUT</a>
-                    <a href="#stories" class="text-sm hover:text-brand-coral transition-colors smooth-scroll focus:outline-none focus:text-brand-coral">STORIES</a>
-                    <a href="#testimonials" class="text-sm hover:text-brand-coral transition-colors smooth-scroll focus:outline-none focus:text-brand-coral">TESTIMONIALS</a>
-                    <a href="#faq" class="text-sm hover:text-brand-coral transition-colors smooth-scroll focus:outline-none focus:text-brand-coral">FAQ</a>
-                    <a href="#contact" class="text-sm hover:text-brand-coral transition-colors smooth-scroll focus:outline-none focus:text-brand-coral">CONTACT</a>
+                    <a href="collections/index.html" class="text-sm hover:text-brand-teal transition-colors focus:outline-none focus:text-brand-teal">COLLECTIONS</a>
+                    <a href="#about" class="text-sm hover:text-brand-teal transition-colors smooth-scroll focus:outline-none focus:text-brand-teal">ABOUT</a>
+                    <a href="#stories" class="text-sm hover:text-brand-teal transition-colors smooth-scroll focus:outline-none focus:text-brand-teal">STORIES</a>
+                    <a href="#testimonials" class="text-sm hover:text-brand-teal transition-colors smooth-scroll focus:outline-none focus:text-brand-teal">TESTIMONIALS</a>
+                    <a href="#faq" class="text-sm hover:text-brand-teal transition-colors smooth-scroll focus:outline-none focus:text-brand-teal">FAQ</a>
+                    <a href="#contact" class="text-sm hover:text-brand-teal transition-colors smooth-scroll focus:outline-none focus:text-brand-teal">CONTACT</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden p-2 text-brand-charcoal hover:text-brand-coral transition-colors focus:outline-none focus:ring-2 focus:ring-brand-coral rounded" aria-label="Toggle mobile menu" aria-expanded="false">
+                <button id="mobile-menu-button" class="md:hidden p-2 text-brand-charcoal hover:text-brand-teal transition-colors focus:outline-none focus:ring-2 focus:ring-brand-teal rounded" aria-label="Toggle mobile menu" aria-expanded="false">
                     <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -479,13 +488,13 @@
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-[73px] bg-white z-30 overflow-y-auto">
             <nav class="flex flex-col p-6 space-y-4" aria-label="Mobile navigation">
-                <a href="collections/index.html" class="text-lg py-3 border-b border-gray-200 hover:text-brand-coral transition-colors focus:outline-none focus:text-brand-coral">COLLECTIONS</a>
-                <a href="#about" class="text-lg py-3 border-b border-gray-200 hover:text-brand-coral transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-coral">ABOUT</a>
-                <a href="#stories" class="text-lg py-3 border-b border-gray-200 hover:text-brand-coral transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-coral">STORIES</a>
-                <a href="#testimonials" class="text-lg py-3 border-b border-gray-200 hover:text-brand-coral transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-coral">TESTIMONIALS</a>
-                <a href="#faq" class="text-lg py-3 border-b border-gray-200 hover:text-brand-coral transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-coral">FAQ</a>
-                <a href="#contact" class="text-lg py-3 hover:text-brand-coral transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-coral">CONTACT</a>
-                <a href="#contact" class="mt-4 inline-block text-center bg-brand-coral text-white px-6 py-3 rounded hover:bg-brand-charcoal transition-colors smooth-scroll mobile-menu-link">Get Custom Artwork</a>
+                <a href="collections/index.html" class="text-lg py-3 border-b border-gray-200 hover:text-brand-teal transition-colors focus:outline-none focus:text-brand-teal">COLLECTIONS</a>
+                <a href="#about" class="text-lg py-3 border-b border-gray-200 hover:text-brand-teal transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-teal">ABOUT</a>
+                <a href="#stories" class="text-lg py-3 border-b border-gray-200 hover:text-brand-teal transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-teal">STORIES</a>
+                <a href="#testimonials" class="text-lg py-3 border-b border-gray-200 hover:text-brand-teal transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-teal">TESTIMONIALS</a>
+                <a href="#faq" class="text-lg py-3 border-b border-gray-200 hover:text-brand-teal transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-teal">FAQ</a>
+                <a href="#contact" class="text-lg py-3 hover:text-brand-teal transition-colors smooth-scroll mobile-menu-link focus:outline-none focus:text-brand-teal">CONTACT</a>
+                <a href="#contact" class="mt-4 inline-block text-center bg-brand-teal text-white px-6 py-3 rounded hover:bg-brand-deep-olive transition-colors smooth-scroll mobile-menu-link">Get Custom Artwork</a>
             </nav>
         </div>
     </header>
@@ -515,7 +524,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
                     <a href="collections/index.html"
-                       class="inline-block bg-brand-coral hover:bg-brand-charcoal text-white px-10 py-4 transition-all rounded hover:scale-105 transform">
+                       class="inline-block bg-brand-teal hover:bg-brand-deep-olive text-white px-10 py-4 transition-all rounded hover:scale-105 transform">
                         Browse Original Artwork
                     </a>
                     <a href="#contact"
@@ -563,14 +572,14 @@
                         <!-- Quick View Overlay -->
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
                             <a href="instagram-art/art-03.jpg"
-                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-coral hover:text-white transition-colors text-sm"
+                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-teal hover:text-white transition-colors text-sm"
                                data-gallery="collections"
                                data-title="Mixed Media Collection"
                                data-description="Explore 37 unique mixed media artworks">
                                 Quick View
                             </a>
                             <a href="collections/mixed-media.html"
-                               class="px-4 py-2 bg-brand-coral text-white rounded hover:bg-brand-charcoal transition-colors text-sm">
+                               class="px-4 py-2 bg-brand-teal text-white rounded hover:bg-brand-deep-olive transition-colors text-sm">
                                 View Collection
                             </a>
                         </div>
@@ -590,14 +599,14 @@
                         <!-- Quick View Overlay -->
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
                             <a href="instagram-art/art-09.jpg"
-                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-coral hover:text-white transition-colors text-sm"
+                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-teal hover:text-white transition-colors text-sm"
                                data-gallery="collections"
                                data-title="Drawings & Sketches Collection"
                                data-description="Explore 22 detailed drawings and sketches">
                                 Quick View
                             </a>
                             <a href="collections/drawings-sketches.html"
-                               class="px-4 py-2 bg-brand-coral text-white rounded hover:bg-brand-charcoal transition-colors text-sm">
+                               class="px-4 py-2 bg-brand-teal text-white rounded hover:bg-brand-deep-olive transition-colors text-sm">
                                 View Collection
                             </a>
                         </div>
@@ -617,14 +626,14 @@
                         <!-- Quick View Overlay -->
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
                             <a href="instagram-art/art-13.jpg"
-                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-coral hover:text-white transition-colors text-sm"
+                               class="glightbox px-4 py-2 bg-white text-brand-charcoal rounded hover:bg-brand-teal hover:text-white transition-colors text-sm"
                                data-gallery="collections"
                                data-title="Paintings & Watercolors Collection"
                                data-description="Explore 11 vibrant paintings and watercolors">
                                 Quick View
                             </a>
                             <a href="collections/paintings-watercolors.html"
-                               class="px-4 py-2 bg-brand-coral text-white rounded hover:bg-brand-charcoal transition-colors text-sm">
+                               class="px-4 py-2 bg-brand-teal text-white rounded hover:bg-brand-deep-olive transition-colors text-sm">
                                 View Collection
                             </a>
                         </div>
@@ -873,7 +882,7 @@
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-2" style="color: #2B2826;">Your Name *</label>
                                 <input type="text" id="name" name="name" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-coral focus:border-transparent"
+                                       class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-teal focus:border-transparent"
                                        placeholder="John Doe">
                             </div>
 
@@ -881,7 +890,7 @@
                             <div>
                                 <label for="email" class="block text-sm font-medium mb-2" style="color: #2B2826;">Your Email *</label>
                                 <input type="email" id="email" name="email" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-coral focus:border-transparent"
+                                       class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-teal focus:border-transparent"
                                        placeholder="john@example.com">
                             </div>
 
@@ -889,7 +898,7 @@
                             <div>
                                 <label for="subject" class="block text-sm font-medium mb-2" style="color: #2B2826;">Subject *</label>
                                 <select id="subject" name="subject" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-coral focus:border-transparent">
+                                        class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                                     <option value="">Select a subject...</option>
                                     <option value="General Inquiry">General Inquiry</option>
                                     <option value="Commission Request">Commission Request</option>
@@ -903,7 +912,7 @@
                             <div>
                                 <label for="message" class="block text-sm font-medium mb-2" style="color: #2B2826;">Message *</label>
                                 <textarea id="message" name="message" required rows="5"
-                                          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-coral focus:border-transparent resize-none"
+                                          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-teal focus:border-transparent resize-none"
                                           placeholder="Tell me about your project or question..."></textarea>
                             </div>
 
@@ -1122,7 +1131,7 @@
     </div>
 
     <!-- Enhanced Footer -->
-    <footer class="bg-brand-charcoal text-brand-cream py-12">
+    <footer class="bg-brand-rich-charcoal text-brand-cream py-12">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Column 1: Brand -->
@@ -1137,6 +1146,18 @@
                            class="hover:opacity-70 transition-opacity" aria-label="Follow us on Instagram">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@snippetandsplotch" target="_blank" rel="noopener noreferrer"
+                           class="hover:opacity-70 transition-opacity" aria-label="Follow us on YouTube">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.pinterest.com/snippetandsplotch/" target="_blank" rel="noopener noreferrer"
+                           class="hover:opacity-70 transition-opacity" aria-label="Follow us on Pinterest">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
                             </svg>
                         </a>
                         <a href="mailto:snippetandsploch@gmail.com"
@@ -1187,8 +1208,11 @@
 
             <!-- Footer Bottom -->
             <div class="border-t border-gray-700 pt-8 text-center text-sm opacity-80">
-                <p>
+                <p class="mb-3">
                     © <span id="current-year"></span> <span class="heading-font">SNIPPET <span class="text-xs">AND</span> SPLOTCH</span>. All rights reserved.
+                </p>
+                <p class="text-xs opacity-70 max-w-2xl mx-auto">
+                    All artwork and images are protected by copyright law. Unauthorized reproduction, distribution, or commercial use is prohibited without written permission.
                 </p>
             </div>
         </div>
@@ -1197,9 +1221,9 @@
     <!-- Sticky CTA Button -->
     <a href="#contact" id="sticky-cta"
        class="fixed bottom-5 right-5 z-50 px-6 py-3 text-white rounded-full shadow-lg transition-all smooth-scroll hidden md:block"
-       style="background-color: #E14749;"
-       onmouseover="this.style.backgroundColor='#2B2826'"
-       onmouseout="this.style.backgroundColor='#E14749'">
+       style="background-color: #2A7C7C;"
+       onmouseover="this.style.backgroundColor='#4A433A'"
+       onmouseout="this.style.backgroundColor='#2A7C7C'">
         💬 Start Your Commission
     </a>
 
