@@ -1,0 +1,28 @@
+# Robots.txt for Snippet and Splotch Art Portfolio
+# https://snippetandsplotch.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://snippetandsplotch.github.io/sitemap.xml
+
+# Disallow backup files and testing pages
+Disallow: /index-backup-*
+Disallow: /index-before-*
+Disallow: /*-backup.html
+Disallow: /test-*.html
+Disallow: /color-tester.html
+Disallow: /complete-palette.html
+
+# Allow important assets
+Allow: /instagram-art/
+Allow: /collections/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1

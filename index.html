@@ -7,13 +7,39 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snippet and Splotch | Art Portfolio</title>
+    <title>Snippet and Splotch | Original Art & Custom Commissions | Visual Artist Portfolio</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo-monogram.png">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Original art and prints by Snippet & Splotch - abstract paintings, digital art, and unique illustrations.">
+    <meta name="description" content="Discover original artwork by Snippet and Splotch - 85+ unique pieces including mixed media, paintings, sketches, and sculptures. Browse collections, commission custom art, and purchase original pieces. Abstract art, contemporary illustrations, and handcrafted creativity.">
+    <meta name="keywords" content="original art, custom art commissions, abstract paintings, mixed media art, contemporary art, visual artist, art portfolio, buy original artwork, commission artist, handmade art, creative illustrations, Snippet and Splotch">
+    <meta name="author" content="Snippet and Splotch">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://snippetandsplotch.github.io/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snippetandsplotch.github.io/">
+    <meta property="og:title" content="Snippet and Splotch | Original Art & Custom Commissions">
+    <meta property="og:description" content="Explore 85+ original artworks including mixed media, paintings, and sculptures. Commission custom art or purchase unique pieces from visual artist Snippet and Splotch.">
+    <meta property="og:image" content="https://snippetandsplotch.github.io/logo-wordmark.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Snippet and Splotch Art Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://snippetandsplotch.github.io/">
+    <meta name="twitter:title" content="Snippet and Splotch | Original Art & Custom Commissions">
+    <meta name="twitter:description" content="Explore 85+ original artworks. Commission custom art or purchase unique pieces.">
+    <meta name="twitter:image" content="https://snippetandsplotch.github.io/logo-wordmark.png">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#2A7C7C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -877,7 +903,13 @@
                     <!-- Contact Form -->
                     <div class="bg-white p-8">
                         <h3 class="heading-font text-xl mb-6" style="color: #2B2826;">Send a Message</h3>
-                        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                        <form id="contact-form" action="https://formsubmit.co/snippetandsploch@gmail.com" method="POST" class="space-y-4">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New inquiry from Snippet and Splotch website">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_next" value="https://snippetandsplotch.github.io/?message=sent">
                             <!-- Name Field -->
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-2" style="color: #2B2826;">Your Name *</label>
@@ -1252,6 +1284,23 @@
             window.addEventListener('DOMContentLoaded', function() {
                 console.log('Page loaded successfully');
 
+                // Check for form submission success
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('message') === 'sent') {
+                    const formStatus = document.getElementById('form-status');
+                    if (formStatus) {
+                        formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you within 24 hours.';
+                        formStatus.className = 'mt-4 p-4 rounded bg-green-100 text-green-800';
+                        formStatus.classList.remove('hidden');
+                        // Scroll to contact section
+                        setTimeout(() => {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }, 500);
+                        // Clear URL parameter
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                    }
+                }
+
                 // Force visibility of main sections as backup
                 const sections = ['shop', 'about', 'stories', 'testimonials', 'contact', 'faq'];
                 sections.forEach(id => {
@@ -1346,46 +1395,21 @@
             });
         });
 
-        // Form Submission Handling
+        // Form Submission Handling (FormSubmit handles the actual submission)
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
 
         if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                // Show loading state
+            contactForm.addEventListener('submit', function(e) {
+                // Show loading state (form will submit naturally)
                 const submitButton = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-
-                try {
-                    const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (response.ok) {
-                        formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you within 24 hours.';
-                        formStatus.className = 'mt-4 p-4 rounded bg-green-100 text-green-800';
-                        formStatus.classList.remove('hidden');
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    formStatus.textContent = '✗ Oops! Something went wrong. Please email me directly at snippetandsploch@gmail.com';
-                    formStatus.className = 'mt-4 p-4 rounded bg-red-100 text-red-800';
-                    formStatus.classList.remove('hidden');
+                if (submitButton) {
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
                 }
 
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
+                // Form will submit to FormSubmit.co and redirect back
+                // Success message will be shown on page reload (handled in DOMContentLoaded)
             });
         }
 
