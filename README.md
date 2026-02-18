@@ -20,7 +20,7 @@ Whether through sketchbooks or canvas, digital brushes or mixed media, every pie
 If any artwork speaks to you and you'd like to purchase a piece, please don’t hesitate to get in touch.
 
 📩 **Contact:**  
-**Email:** snippetandsploch@gmail.com  
+**Email:** snippetandsplotch@gmail.com  
 **Instagram:** [@SnippetAndSploch](https://instagram.com/snippetandsplotch)
 
 Your support means the world and helps keep the creativity flowing.

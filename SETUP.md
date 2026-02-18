@@ -30,7 +30,7 @@ If you don't want to set up Formspree immediately, you can use a simple mailto f
 
 Replace the contact form action with:
 ```html
-<form action="mailto:snippetandsploch@gmail.com" method="post" enctype="text/plain">
+<form action="mailto:snippetandsplotch@gmail.com" method="post" enctype="text/plain">
 ```
 
 **Note**: This will open the user's email client. Formspree is recommended for a better user experience.

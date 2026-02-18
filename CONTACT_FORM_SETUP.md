@@ -10,7 +10,7 @@ Your contact form is configured and ready to receive inquiries!
 
 **Service Used:** FormSubmit.co (100% Free, No Signup Required)
 
-**Your Contact Email:** snippetandsploch@gmail.com
+**Your Contact Email:** snippetandsplotch@gmail.com
 
 ### First-Time Activation (ONE TIME ONLY)
 
@@ -20,7 +20,7 @@ Your contact form is configured and ready to receive inquiries!
 2. **Scroll to Contact section**
 3. **Fill out the form yourself** (use any test data)
 4. **Click "Send Message"**
-5. **Check your email** (snippetandsploch@gmail.com)
+5. **Check your email** (snippetandsplotch@gmail.com)
 6. **Click the activation link** from FormSubmit
 
 **After activation, the form will work for everyone!**
@@ -31,7 +31,7 @@ Your contact form is configured and ready to receive inquiries!
 
 1. Visitor fills out your contact form
 2. Form sends to FormSubmit.co
-3. FormSubmit forwards email to: **snippetandsploch@gmail.com**
+3. FormSubmit forwards email to: **snippetandsplotch@gmail.com**
 4. Visitor gets redirected back to your site with success message
 5. You receive email with:
    - Visitor's name
