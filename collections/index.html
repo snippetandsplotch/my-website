@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Collections | Browse 85+ Original Artworks | Snippet and Splotch</title>
+    <title>Art Collections | Browse Original Artworks | Snippet and Splotch</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Browse 7 curated art collections featuring 85+ original pieces: Mixed Media (37), Drawings & Sketches (22), Paintings & Watercolors (11), and more. Find unique artwork by Snippet and Splotch.">
-    <meta name="keywords" content="art collections, mixed media, paintings, sketches, watercolors, colored pencil art, marker illustrations, paper art, sculptures, original artwork">
+    <meta name="description" content="Browse 3 curated art collections featuring 36 original pieces by Snippet and Splotch — Portraits & Figures, Nature & Fauna, and Artisan Works.">
+    <meta name="keywords" content="art collections, original art, portrait art, animal art, artisan works, buy original artwork, Snippet and Splotch">
     <link rel="canonical" href="https://snippetandsplotch.github.io/collections/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Art Collections | Snippet and Splotch">
-    <meta property="og:description" content="Browse 7 curated collections featuring 85+ original artworks. Mixed media, paintings, sketches, and more.">
+    <meta property="og:description" content="Browse 3 curated art collections featuring 36 original pieces — Portraits & Figures, Nature & Fauna, and Artisan Works.">
     <meta property="og:url" content="https://snippetandsplotch.github.io/collections/">
-    <meta property="og:type" content="website">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,36 +27,12 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Watermark Protection -->
-    <link rel="stylesheet" href="../watermark-overlay.css">
-
     <style>
-        .heading-font {
-            font-family: 'Libre Baskerville', serif;
-        }
-
-        body {
-            font-family: 'Avenir', sans-serif;
-        }
-
-        .collection-card {
-            transition: all 0.3s ease;
-            background: white;
-            cursor: pointer;
-        }
-
-        .collection-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-
-        .collection-image {
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .collection-card:hover .collection-image {
-            transform: scale(1.05);
-        }
+        .heading-font { font-family: 'Libre Baskerville', serif; }
+        body { font-family: 'Avenir', sans-serif; }
+        .collection-card { transition: all 0.3s ease; overflow: hidden; }
+        .collection-card:hover .collection-image { transform: scale(1.05); }
+        .collection-image { transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body style="background-color: #EBE3D5;">
@@ -66,7 +41,6 @@
     <nav class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex items-center">
                     <a href="../index.html" class="flex items-center space-x-3">
                         <img src="../logo-badge.png" alt="Snippet and Splotch" class="h-12 w-12 object-contain">
@@ -75,23 +49,17 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="../index.html" class="text-sm tracking-wider hover:opacity-70 transition" style="color: #5F5548;">HOME</a>
                     <a href="index.html" class="text-sm tracking-wider hover:opacity-70 transition font-semibold" style="color: #5F5548;">COLLECTIONS</a>
                     <a href="../index.html#about" class="text-sm tracking-wider hover:opacity-70 transition" style="color: #5F5548;">ABOUT</a>
                     <a href="../index.html#contact" class="text-sm tracking-wider hover:opacity-70 transition" style="color: #5F5548;">CONTACT</a>
                 </div>
-
-                <!-- Mobile menu button -->
                 <button id="mobile-menu-button" class="md:hidden" style="color: #5F5548;">
                     <i data-feather="menu"></i>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t" style="border-color: #C9B8A3;">
             <div class="px-4 py-4 space-y-3">
                 <a href="../index.html" class="block text-sm tracking-wider" style="color: #5F5548;">HOME</a>
@@ -102,111 +70,53 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center mb-16">
-            <h1 class="heading-font text-4xl md:text-5xl mb-4 tracking-wide" style="color: #2B2826;">ART COLLECTIONS</h1>
-            <p class="text-lg tracking-wider" style="color: #8A8279;">Explore by Medium & Style</p>
-        </div>
+    <!-- Page Header -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 class="heading-font text-4xl md:text-5xl mb-4 tracking-wide" style="color: #2B2826;">ALL COLLECTIONS</h1>
+        <p class="text-lg tracking-wider mb-2" style="color: #8A8279;">36 Original Artworks</p>
+        <p class="text-sm max-w-xl mx-auto" style="color: #5F5548;">Explore three curated collections, each telling its own unique story through art</p>
+    </div>
 
-        <!-- Collections Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Collections Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- Mixed Media Collection -->
-            <a href="mixed-media.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
+            <!-- Portraits & Figures -->
+            <a href="portraits-figures.html" class="collection-card block bg-white shadow-sm hover:shadow-md">
                 <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-03.jpg"
-                         alt="Mixed Media Collection"
-                         class="collection-image w-full h-full object-cover">
+                    <img src="../portraits-figures/1.jpg" alt="Portraits & Figures" class="collection-image">
                 </div>
                 <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">MIXED MEDIA</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">37 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Experimental pieces combining various materials and techniques</p>
+                    <h2 class="heading-font text-xl tracking-wide mb-2" style="color: #2B2826;">PORTRAITS & FIGURES</h2>
+                    <p class="text-sm mb-3 tracking-wider" style="color: #8A8279;">5 Artworks</p>
+                    <p class="text-sm leading-relaxed mb-4" style="color: #5F5548;">Expressive portraits capturing the depth and emotion of the human form</p>
+                    <span class="text-xs tracking-widest" style="color: #8B5E3C;">VIEW COLLECTION →</span>
                 </div>
             </a>
 
-            <!-- Drawings & Sketches Collection -->
-            <a href="drawings-sketches.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
+            <!-- Nature & Fauna -->
+            <a href="nature-fauna.html" class="collection-card block bg-white shadow-sm hover:shadow-md">
                 <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-09.jpg"
-                         alt="Drawings & Sketches Collection"
-                         class="collection-image w-full h-full object-cover">
+                    <img src="../nature-fauna/1.jpeg" alt="Nature & Fauna" class="collection-image">
                 </div>
                 <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">DRAWINGS & SKETCHES</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">22 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Expressive line work and detailed pencil studies</p>
+                    <h2 class="heading-font text-xl tracking-wide mb-2" style="color: #2B2826;">NATURE & FAUNA</h2>
+                    <p class="text-sm mb-3 tracking-wider" style="color: #8A8279;">20 Artworks</p>
+                    <p class="text-sm leading-relaxed mb-4" style="color: #5F5548;">Wildlife and nature studies celebrating the beauty of the animal world</p>
+                    <span class="text-xs tracking-widest" style="color: #8B5E3C;">VIEW COLLECTION →</span>
                 </div>
             </a>
 
-            <!-- Paintings & Watercolors Collection -->
-            <a href="paintings-watercolors.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
+            <!-- Artisan Works -->
+            <a href="artisan-works.html" class="collection-card block bg-white shadow-sm hover:shadow-md">
                 <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-13.jpg"
-                         alt="Paintings & Watercolors Collection"
-                         class="collection-image w-full h-full object-cover">
+                    <img src="../artisan-works/1.jpg" alt="Artisan Works" class="collection-image">
                 </div>
                 <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">PAINTINGS & WATERCOLORS</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">11 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Vibrant colors and fluid watercolor techniques</p>
-                </div>
-            </a>
-
-            <!-- Colored Pencil Works Collection -->
-            <a href="colored-pencil.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
-                <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-20.jpg"
-                         alt="Colored Pencil Works Collection"
-                         class="collection-image w-full h-full object-cover">
-                </div>
-                <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">COLORED PENCIL WORKS</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">6 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Rich, layered colored pencil illustrations</p>
-                </div>
-            </a>
-
-            <!-- Marker & Illustrations Collection -->
-            <a href="marker-illustrations.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
-                <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-22.jpg"
-                         alt="Marker & Illustrations Collection"
-                         class="collection-image w-full h-full object-cover">
-                </div>
-                <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">MARKER & ILLUSTRATIONS</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">4 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Bold marker work and contemporary illustrations</p>
-                </div>
-            </a>
-
-            <!-- Paper Art & Cutouts Collection -->
-            <a href="paper-art.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
-                <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-02.jpg"
-                         alt="Paper Art & Cutouts Collection"
-                         class="collection-image w-full h-full object-cover">
-                </div>
-                <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">PAPER ART & CUTOUTS</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">4 Artworks</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Intricate paper cutting and layered compositions</p>
-                </div>
-            </a>
-
-            <!-- Sculptures & 3D Art Collection -->
-            <a href="sculptures.html" class="collection-card overflow-hidden" style="border: 1px solid #C9B8A3;">
-                <div class="aspect-square overflow-hidden">
-                    <img src="../instagram-art/art-18.jpg"
-                         alt="Sculptures & 3D Art Collection"
-                         class="collection-image w-full h-full object-cover">
-                </div>
-                <div class="p-6 text-center">
-                    <h3 class="heading-font text-xl mb-2 tracking-wide" style="color: #2B2826;">SCULPTURES & 3D ART</h3>
-                    <p class="text-sm tracking-wider mb-3" style="color: #8A8279;">1 Artwork</p>
-                    <p class="text-xs leading-relaxed" style="color: #5F5548;">Three-dimensional works and sculptural pieces</p>
+                    <h2 class="heading-font text-xl tracking-wide mb-2" style="color: #2B2826;">ARTISAN WORKS</h2>
+                    <p class="text-sm mb-3 tracking-wider" style="color: #8A8279;">11 Artworks</p>
+                    <p class="text-sm leading-relaxed mb-4" style="color: #5F5548;">Handcrafted creations where imagination meets artisanal skill</p>
+                    <span class="text-xs tracking-widest" style="color: #8B5E3C;">VIEW COLLECTION →</span>
                 </div>
             </a>
 
@@ -214,7 +124,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white mt-20 py-12 border-t" style="border-color: #C9B8A3;">
+    <footer class="bg-white py-12 border-t" style="border-color: #C9B8A3;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <img src="../logo-badge.png" alt="Snippet and Splotch" class="h-16 w-16 mx-auto mb-4 object-contain">
             <p class="text-sm tracking-wider mb-2" style="color: #8A8279;">© 2026 Snippet and Splotch. All rights reserved.</p>
@@ -241,15 +151,9 @@
     </footer>
 
     <script>
-        // Initialize Feather icons
         feather.replace();
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
 
