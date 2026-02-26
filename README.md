@@ -1,36 +1,55 @@
-# 🎨 SnippetAndSploch – Visual Stories & Abstract Worlds
+# Snippet and Splotch — Art Portfolio
 
-Welcome to the art space of **SnippetAndSploch** — a place where colors, shapes, and imagination come together to tell stories beyond words.
+Official website of **Snippet and Splotch**, a visual art portfolio by Mansi.
 
-## 🖌️ About the Artist
-
-**SnippetAndSploch** is a visual artist inspired by everyday chaos, dreams, and fleeting moments. Their work blends abstract expression, playful lines, and bold color palettes to create emotionally resonant art pieces.
-
-Whether through sketchbooks or canvas, digital brushes or mixed media, every piece reflects a moment, a thought, or a fragment of a larger narrative.
-
-## 🖼️ What's on the Website
-
-- Original illustrations  
-- Abstract paintings and prints  
-- Sketchbook explorations  
-- Personal projects and collections  
-
-## 🛒 Interested in Purchasing Art?
-
-If any artwork speaks to you and you'd like to purchase a piece, please don’t hesitate to get in touch.
-
-📩 **Contact:**  
-**Email:** snippetandsplotch@gmail.com  
-**Instagram:** [@SnippetAndSploch](https://instagram.com/snippetandsplotch)
-
-Your support means the world and helps keep the creativity flowing.
-
-## 🌍 View the Portfolio
-
-Visit the full gallery at:  
-👉 **[https://SnippetAndSploch.github.io](https://SnippetAndSploch.github.io)**
+Live at: [https://snippetandsplotch.github.io](https://snippetandsplotch.github.io)
 
 ---
 
-✨ *“Art is how I untangle the noise and find meaning in the mess.”*  
-— SnippetAndSploch
+## About the Artist
+
+I am Mansi, someone who perhaps took learning art in school a little too seriously. What began as discipline became devotion; art was never casual, but studied, practiced, and eventually loved. That seriousness built the foundation.
+
+The name Snippet and Splotch does not take itself too seriously, intentionally so. Picking up a brush is about delight, not perfection; about lightness and play. Creation here goes beyond a basic canvas — different surfaces and mediums set Snippet and Splotch apart, with textures, layers, and mixed techniques shaping each story.
+
+The work is not just painted; it is built and explored. Art is expression in its most vivid, radiant, viscerally visual form. It becomes rhythm, instinct, language — simply joy made visible.
+
+---
+
+## Collections
+
+The portfolio features 37 original artworks across 3 curated collections:
+
+| Collection | Artworks | Description |
+|---|---|---|
+| Portraits & Figures | 5 | Expressive portraits capturing the depth and emotion of the human form |
+| Nature & Fauna | 20 | Wildlife and nature studies celebrating the beauty of the animal world |
+| Artisan Works | 12 | Handcrafted creations blending imagination and artisanal skill |
+
+---
+
+## Commissions & Purchases
+
+To enquire about purchasing an original artwork or commissioning a custom piece, get in touch directly:
+
+- **Email:** snippetandsplotch@gmail.com
+- **Instagram:** [@SnippetAndSplotch](https://instagram.com/snippetandsplotch)
+- **YouTube:** [@snippetandsplotch](https://www.youtube.com/@snippetandsplotch)
+- **Pinterest:** [snippetandsplotch](https://www.pinterest.com/snippetandsplotch/)
+
+---
+
+## Tech Stack
+
+Static HTML site hosted on GitHub Pages. No build process required.
+
+- Tailwind CSS (CDN)
+- GLightbox — fullscreen image viewing
+- Feather Icons
+- Google Fonts — Libre Baskerville
+- FormSubmit.co — contact form
+
+---
+
+*"Picking up a brush is about delight, not perfection."*
+— Mansi, Snippet and Splotch
