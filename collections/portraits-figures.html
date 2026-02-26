@@ -39,6 +39,7 @@
         body { font-family: 'Avenir', sans-serif; }
         .product-card { transition: all 0.3s ease; background: white; }
         .product-image-wrapper { overflow: hidden; position: relative; }
+        .product-image-wrapper a { display: block; height: 100%; }
         .product-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .product-card:hover .product-image { transform: scale(1.05); }
         .product-info { padding: 1.25rem; text-align: center; }
@@ -107,7 +108,9 @@
 
             <div class="product-card">
                 <div class="product-image-wrapper aspect-square">
+                    <a href="../portraits-figures/1.jpg" class="glightbox" data-title="Golden Silhouette" data-gallery="collection">
                     <img src="../portraits-figures/1.jpg" alt="Golden Silhouette" class="product-image" loading="lazy">
+                </a>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Golden Silhouette</h3>
@@ -117,7 +120,9 @@
 
             <div class="product-card">
                 <div class="product-image-wrapper aspect-square">
+                    <a href="../portraits-figures/4.jpeg" class="glightbox" data-title="After Van Gogh" data-gallery="collection">
                     <img src="../portraits-figures/4.jpeg" alt="After Van Gogh" class="product-image" loading="lazy">
+                </a>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">After Van Gogh</h3>
@@ -127,7 +132,9 @@
 
             <div class="product-card">
                 <div class="product-image-wrapper aspect-square">
+                    <a href="../portraits-figures/5.jpeg" class="glightbox" data-title="The Stitched Pearl" data-gallery="collection">
                     <img src="../portraits-figures/5.jpeg" alt="The Stitched Pearl" class="product-image" loading="lazy">
+                </a>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">The Stitched Pearl</h3>
@@ -137,7 +144,9 @@
 
             <div class="product-card">
                 <div class="product-image-wrapper aspect-square">
+                    <a href="../portraits-figures/IMG_0870.jpg" class="glightbox" data-title="Golden Reverie" data-gallery="collection">
                     <img src="../portraits-figures/IMG_0870.jpg" alt="Golden Reverie" class="product-image" loading="lazy">
+                </a>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Golden Reverie</h3>
@@ -147,7 +156,9 @@
 
             <div class="product-card">
                 <div class="product-image-wrapper aspect-square">
+                    <a href="../portraits-figures/IMG_0948.jpeg" class="glightbox" data-title="Serenity" data-gallery="collection">
                     <img src="../portraits-figures/IMG_0948.jpeg" alt="Serenity" class="product-image" loading="lazy">
+                </a>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Serenity</h3>
@@ -195,7 +206,7 @@
 
     <script>
         feather.replace();
-        const lightbox = GLightbox({ selector: '.product-image', touchNavigation: true, loop: true });
+        const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
         document.getElementById('mobile-menu-button').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
