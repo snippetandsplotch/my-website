@@ -750,38 +750,57 @@
 
 
         <!-- Available Art Section -->
-        <div id="available" class="py-16 mb-20" style="background-color: #EBE3D5;">
+        <div id="available" class="py-20 mb-20" style="background-color: #2B2826;">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <p class="text-xs tracking-widest mb-2" style="color: #8B5E3C;">ORIGINALS FOR SALE</p>
-                    <h2 class="heading-font text-3xl mb-3 tracking-wide" style="color: #2B2826;">AVAILABLE ART</h2>
-                    <p class="text-sm tracking-wider" style="color: #8A8279;">Own a one-of-a-kind original piece</p>
+
+                <!-- Section Header -->
+                <div class="text-center mb-14">
+                    <p class="text-xs tracking-widest mb-3" style="color: #8B5E3C;">── ORIGINALS FOR SALE ──</p>
+                    <h2 class="heading-font text-4xl mb-4 tracking-wide" style="color: #EBE3D5;">AVAILABLE ART</h2>
+                    <p class="text-sm" style="color: #8A8279;">Each piece is a one-of-a-kind original. Once it finds a home, it is gone forever.</p>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8">
+                <!-- Cards Grid -->
+                <div class="flex flex-wrap justify-center gap-10">
 
                     <!-- After Van Gogh -->
-                    <div class="bg-white" style="width:320px;border:1px solid #C9B8A3;position:relative;">
-                        <!-- Available badge -->
-                        <div style="position:absolute;top:12px;left:12px;z-index:10;background-color:#5F5548;color:#EBE3D5;font-size:10px;letter-spacing:0.12em;padding:4px 10px;">
-                            AVAILABLE
+                    <div class="group" style="width:360px;">
+                        <!-- Image with overlay -->
+                        <div style="position:relative;overflow:hidden;">
+                            <a href="portraits-figures/4.jpeg" class="glightbox-available" data-gallery="available" data-title="After Van Gogh">
+                                <img src="portraits-figures/4.jpeg" alt="After Van Gogh"
+                                    class="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    style="height:420px;display:block;" loading="lazy">
+                                <!-- Dark hover overlay -->
+                                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                                    style="background:rgba(43,40,38,0.45);">
+                                    <span class="text-xs tracking-widest" style="color:#EBE3D5;">VIEW FULL SIZE</span>
+                                </div>
+                            </a>
+                            <!-- Available pill -->
+                            <div style="position:absolute;top:14px;left:14px;background-color:#5F5548;color:#EBE3D5;font-size:9px;letter-spacing:0.15em;padding:5px 12px;">
+                                ● AVAILABLE
+                            </div>
                         </div>
-                        <a href="portraits-figures/4.jpeg" class="glightbox-available" data-gallery="available" data-title="After Van Gogh">
-                            <img src="portraits-figures/4.jpeg" alt="After Van Gogh"
-                                class="w-full object-cover" style="height:320px;" loading="lazy">
-                        </a>
-                        <div class="p-4">
-                            <h3 class="heading-font text-base mb-1" style="color:#2B2826;">After Van Gogh</h3>
-                            <p class="text-xs mb-4" style="color:#8A8279;">Original · Portraits</p>
-                            <div style="display:flex;gap:8px;">
+
+                        <!-- Card Info -->
+                        <div class="pt-5 pb-2" style="border-top: 1px solid #3a3633;">
+                            <div class="flex items-start justify-between mb-1">
+                                <h3 class="heading-font text-lg" style="color:#EBE3D5;">After Van Gogh</h3>
+                                <span class="text-xs tracking-widest mt-1" style="color:#8B5E3C;">ORIGINAL</span>
+                            </div>
+                            <p class="text-xs mb-5" style="color:#8A8279;">Portraits · Mixed Media</p>
+
+                            <!-- CTA Buttons -->
+                            <div style="display:flex;gap:10px;">
                                 <a href="https://ig.me/m/snippetandsplotch" target="_blank" rel="noopener noreferrer"
-                                    class="flex-1 text-center text-xs tracking-widest py-2 border transition-colors hover:opacity-80"
-                                    style="border-color:#5F5548;color:#5F5548;">
+                                    class="flex-1 text-center text-xs tracking-widest py-3 transition-all duration-200 hover:opacity-90"
+                                    style="background-color:#5F5548;color:#EBE3D5;">
                                     DM ON INSTAGRAM
                                 </a>
                                 <a href="mailto:snippetandsplotch@gmail.com?subject=Enquiry%3A%20After%20Van%20Gogh&body=Hi%20Mansi%2C%0A%0AI%27m%20interested%20in%20purchasing%20%22After%20Van%20Gogh%22.%20Could%20you%20please%20share%20more%20details%3F%0A%0AThank%20you%21"
-                                    class="flex-1 text-center text-xs tracking-widest py-2 border transition-colors hover:opacity-80"
-                                    style="border-color:#8B5E3C;color:#8B5E3C;">
+                                    class="flex-1 text-center text-xs tracking-widest py-3 transition-all duration-200 hover:opacity-90"
+                                    style="background-color:#8B5E3C;color:#EBE3D5;">
                                     EMAIL
                                 </a>
                             </div>
@@ -789,6 +808,12 @@
                     </div>
 
                 </div>
+
+                <!-- Footer note -->
+                <p class="text-center text-xs mt-12" style="color:#5F5548;">
+                    Interested in a piece not listed here? <a href="#contact" class="smooth-scroll underline hover:no-underline" style="color:#8B5E3C;">Get in touch</a> — commissions are always welcome.
+                </p>
+
             </div>
         </div>
 
